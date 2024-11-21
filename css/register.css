@@ -1,0 +1,101 @@
+
+.registercard{
+    
+    background-color: rgb(181, 255, 181);
+    width: 50%;
+    margin: 2% auto auto auto;
+    border: 2px solid rgb(0, 151, 0);
+    border-radius: 20px;
+    padding: 0% 3% 3% 3%;
+}
+
+.regtxt{
+    color: green;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    grid-column: span 12;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+select:focus,
+button:focus {
+  outline: none;
+}
+
+.txtfields{
+    color: #d4ba4e;
+    font-weight: 900;
+    font-size: 30px;
+    grid-column: span 1;
+}
+.txtfields2{
+    color: #d4ba4e;
+    font-weight: 900;
+    font-size: 30px;
+    grid-column: span 3;
+    margin-top: 20%;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    
+}
+.names{
+    color: hsl(120, 100%, 25%);
+    grid-column: span 4;
+    text-align: center;
+    margin-right: 8%;
+    margin-top: 1.3%;
+}
+
+form{
+    grid-column: span 13
+}
+
+.fields{
+    width: 90%;
+    background-color: transparent;
+    border: none;
+    font-size: 23px;
+    border: none; 
+    border-bottom: 3px solid hsl(120, 100%, 19%); 
+    outline: none; /* Remove default focus outline */
+    grid-column: span 4;
+    
+}
+.fields2{
+    
+    grid-column: span 5;
+}
+
+.fields3{
+    grid-column: span 6;
+}
+.fields4{
+    margin-left: 2%;
+    grid-column: span 7;
+}
+.empty{
+    grid-column: span 5;
+}
+
+button {
+    position: absolute;
+    bottom: 60px;
+    right: 100px;
+
+    background-color: #2dba60;
+    border-radius: 35px;
+    border: 2px solid darkgreen;
+    height: 70px;
+    width: 250px;
+}
+
+button p{
+    font-size: 30px;
+    font-weight: 800;
+    color: #087c44;
+    padding: 0;
+    margin: 0;
+}
