@@ -4,7 +4,7 @@ import requests
 
 arduino_port = "/dev/ttyACM0"
 baud_rate = 9600
-server_url = "http://192.168.1.13/api/login" 
+server_url = "http://192.168.1.19/api/login" 
 
 # Open serial connection
 ser = serial.Serial(arduino_port, baud_rate, timeout=1)
