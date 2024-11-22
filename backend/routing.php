@@ -13,6 +13,9 @@ switch($user_link){
     case "/update":
         require("views/update.php");
         break;
+    case "/api/login":
+        require("backend/API/login.php");
+        break;
     default:
         http_response_code(404);
         break;

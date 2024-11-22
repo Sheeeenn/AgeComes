@@ -1,0 +1,19 @@
+.scan-text {
+    font-family: sans-serif;
+    font-size: 65px;
+    color: #0d9451;
+    margin: 0;
+    padding: 0;
+    margin: 5% 0 0 5%;
+}
+
+.bar-div{
+}
+
+.bar-image {
+    border: 7px dotted orange;
+    width: 30%;
+    margin: 0;
+    padding: 2px;
+    margin-left: 7.5%
+}
