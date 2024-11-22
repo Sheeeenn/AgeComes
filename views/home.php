@@ -2,7 +2,8 @@
     <head>
         <title>Age Comes With Price</title>
         <link rel="stylesheet" type="text/css" href="other/header.css">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="other/button.css">
+        <link rel="stylesheet" type="text/css" href="css/home.css">
     </head>
 
     <body>
@@ -16,4 +17,3 @@
     </body>
 
 <html>
-?>

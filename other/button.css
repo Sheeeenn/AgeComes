@@ -1,12 +1,9 @@
-.dgrid {
-}
-
 button {
     position: absolute;
     bottom: 60px;
     right: 100px;
 
-    background-color: green;
+    background-color: #2dba60;
     border-radius: 35px;
     border: 2px solid darkgreen;
     height: 70px;
@@ -15,8 +12,8 @@ button {
 
 button p{
     font-size: 30px;
-    font-weight: 700;
-    color: darkgreen;
+    font-weight: 800;
+    color: #087c44;
     padding: 0;
     margin: 0;
 }
