@@ -1,20 +1,23 @@
 #include <SoftwareSerial.h>
 
+
 SoftwareSerial barcodeScanner(2, 3);
+bool firstChar = true;          
+String firstCharValue = "";     
 
 void setup() {
-
   Serial.begin(9600);
   barcodeScanner.begin(9600); 
-  
   pinMode(LED_BUILTIN, OUTPUT); 
 }
 
 void loop() {
   String barcode = "";
 
+ 
   while (barcodeScanner.available()) {
     char c = barcodeScanner.read();
+
   
     if (c == '\n' || c == '\r') {
       break;
@@ -22,9 +25,18 @@ void loop() {
     barcode += c;
   }
 
- 
+
   if (barcode.length() > 0) {
-    Serial.println("Barcode scanned: " + barcode);
+    if (firstChar) {
+      
+      firstCharValue = barcode;
+      firstChar = false;
+    } else {
+    
+      Serial.println("https://localhost:8080/user/" + firstCharValue + barcode);
+      firstCharValue = "";
+      firstChar = true;
+    }
 
     digitalWrite(LED_BUILTIN, HIGH);  
     delay(100); 
