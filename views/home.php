@@ -10,6 +10,8 @@
 
         <?php include("other/header.php")?>
 
+        <p>Scan the barcode.</p>
+
         <div class="dgrid">
             <button><p>REGISTER</p></button>
         </div>
