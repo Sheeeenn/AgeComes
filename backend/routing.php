@@ -10,6 +10,9 @@ switch($user_link){
     case "/register":
         require("views/register.php");
         break;
+    case "/update":
+        require("views/update.php");
+        break;
     default:
         http_response_code(404);
         break;
