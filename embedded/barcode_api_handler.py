@@ -2,7 +2,7 @@ import serial
 import requests
 
 
-arduino_port = "/dev/ttyACM0"
+arduino_port = "COM5"
 baud_rate = 9600
 server_url = "http://192.168.1.19/api/login" 
 
