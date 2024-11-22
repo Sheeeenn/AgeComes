@@ -4,7 +4,7 @@ import requests
 
 arduino_port = "/dev/ttyACM0"
 baud_rate = 9600
-server_url = "http://localhost:8080/user/" 
+server_url = "http://192.168.1.13/api/login" 
 
 # Open serial connection
 ser = serial.Serial(arduino_port, baud_rate, timeout=1)
@@ -19,8 +19,8 @@ while True:
             print(f"Received: {data}")
 
             # Send data to backend API
-            # response = requests.post(server_url, json={"barcode": data})
-            # print(f"Response: {response.status_code}, {response.text}")
+            response = requests.post(server_url, json={"barcode": data})
+            print(f"Response: {response.status_code}, {response.text}")
 
     except KeyboardInterrupt:
         print("Stopping script...")
