@@ -25,7 +25,6 @@ void loop() {
     barcode += c;
   }
 
-
   if (barcode.length() > 0) {
     if (firstChar) {
       
@@ -33,7 +32,8 @@ void loop() {
       firstChar = false;
     } else {
     
-      Serial.println("https://localhost:8080/user/" + firstCharValue + barcode);
+      // Return the full barcode string
+      Serial.println(firstCharValue + barcode);
       firstCharValue = "";
       firstChar = true;
     }
