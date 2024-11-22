@@ -17,26 +17,38 @@
     border-radius: 20px;
     padding: 3%;
     background-color: rgb(181, 255, 181);
+    
 }
 
+.grid{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
 .details{
     color: #047e43;
-    font-size: 30px;
+    font-size: 40px;
     font-family: sans-serif;
-    font-weight: 600;
+    font-weight: 500;
+    grid-column: span 3;
 }
 .fields{
     color: #047e43;
-    width: 60%;
+    width: 90%;
     background-color: transparent;
     border: none;
-    font-size: 27px;
+    font-size: 34px;
     font-weight: 600;
     border: none; 
     border-bottom: 1px solid transparent; 
     outline: none; /* Remove default focus outline */
     transition: border-color 0.3s ease;
+    grid-column: span 9;
 }
 .fields:focus{
     border-bottom: 1px solid hsl(120, 100%, 19%);
+}
+.line{
+    margin-bottom: 1%;
+    grid-column: span 12;
+    
 }
