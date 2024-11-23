@@ -3,9 +3,19 @@
 $host = "localhost";
 $username = "root";
 $password = "";
-$dbname = "age_comes";
+$dbname = "AgeComes";
 
 $conn = new mysqli($host, $username, $password);
+
+
+$sql_create_db = "CREATE DATABASE IF NOT EXISTS $dbname";
+if ($conn->query($sql_create_db) === FALSE) {
+    die("Error creating database: " . $conn->error);
+}
+
+if (!$conn->select_db($dbname)) {
+    die("Error selecting database: " . $conn->error);
+}
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -24,9 +34,7 @@ CREATE TABLE IF NOT EXISTS AgeComes (
     LastStoreSpent VARCHAR(255)
 )";
 
-if ($conn->query($sql) === TRUE) {
-    echo "Database and Tables created successfully.";
-} else {
+if ($conn->query($sql) === FALSE) {
     echo "Error: " . $conn->error;
 }
 
