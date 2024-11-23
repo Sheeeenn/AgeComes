@@ -1,3 +1,8 @@
+<?php
+require("backend/main/dashboard.php");
+require("backend/main/generate.php");
+?>
+
 <html lang="en">
 
 <head>
@@ -50,9 +55,18 @@
         </div>
 
     </div>
+    
+    
     <div class="space">
-        <button type="submit" class="button where"><p>SHOW BARCODE</p></button>
-        <button type="submit" class="button where2"><p>UPDATE</p></button>
+        <div class="bar-div">
+            <a class="barcode" href="fb.com" target="_blank"><?php echo $renderer->render($barcode , $barcode->getWidth() * 4, 100);  ?></a>
+        </div>
+        <div class="button-div">
+            <button type="submit" class="button where2"><p>UPDATE</p></button>
+        </div>
+        <div class="click-div">
+            <p class="click">(CLICK TO VIEW FULLSCREEN)</p>
+        </div>
     </div>
     
 

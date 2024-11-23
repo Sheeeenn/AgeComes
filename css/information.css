@@ -72,9 +72,7 @@
 .pad{
     margin-bottom: 3%;
 }
-.space{
-    margin: 1%;
-}
+
 button {
     position: absolute;
     display: inline-block;
@@ -85,12 +83,7 @@ button {
     cursor: pointer;
     transition: transform 0.3s ease; /* Smooth transition */
 }
-.where{
-    margin-left: 4%;
-}
-.where2{
-    margin-left: 80.2%;
-}
+
 
 button p{
     font-size: 30px;
@@ -104,3 +97,32 @@ button:hover {
    transform: scale(1.05);
    background-color: #ffffff;
   }
+
+.space {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, 50px);
+}
+
+.bar-div {
+    grid-column: 2 / span 4;
+    grid-row: 1 / span 2;
+}
+
+.button-div {
+    grid-column: 10 / span 2;
+    grid-row: 1 / span 2;
+}
+
+.click-div {
+    grid-column: 2 / span 4;
+    grid-row: 3 / span 1;
+}
+
+.click{
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    font-family: sans-serif;
+}

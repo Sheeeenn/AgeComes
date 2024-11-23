@@ -13,7 +13,7 @@ switch($user_link){
     case "/update":
         require("views/update.php");
         break;
-    case "/information":
+    case "/dashboard":
         require("views/information.php");
         break;
     case "/api/login":

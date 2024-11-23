@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         require_once("backend/start.php");
         $_SESSION["CardID"] = $cardNumber;
-        header("location: /information");
+        header("location: /dashboard");
 
     }
 
