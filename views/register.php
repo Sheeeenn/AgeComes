@@ -1,3 +1,7 @@
+<?php
+require("backend/database/connection.php");
+?>
+
 <html lang="en">
 
 <head>
@@ -13,12 +17,12 @@
 
     <div class="registercard container">
         <h1 class="regtxt">REGISTRATION</h1>
-        <form action="/action_page.php" class="container" method="POST">
+        <form action="" class="container" method="POST">
         
             <label for="fname" class="txtfields">NAME:</label>
-            <input type="text" id="fname" name="fname" class="fields spanfields" required>
-            <input type="text" id="fname" name="fname" class="fields spanfields" required>
-            <input type="text" id="fname" name="fname" class="fields spanfields" required><br><br>
+            <input type="text" name="sname" class="fields spanfields" required>
+            <input type="text" name="fname" class="fields spanfields" required>
+            <input type="text" name="mname" class="fields spanfields" required><br><br>
             <div class="empty2"></div>
             <div class="names">SURNAME</div>
 
@@ -28,10 +32,10 @@
                 
         
             <label for="lname" class="txtfields2">EMAIL:</label>
-            <input type="text" id="lname" name="lname" class="fields fields2" required>
+            <input type="text" name="ename" class="fields fields2" required>
             <div class="empty"></div>
             <label for="lname" class="txtfields2">CARD NUMBER:</label>
-            <input type="text" id="lname" name="lname" class="fields fields2 margin" required>
+            <input type="text" name="cname" class="fields fields2 margin" required>
             <button type="submit"><p>REGISTER</p></button>
             
         </form>

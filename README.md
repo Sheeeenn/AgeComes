@@ -17,7 +17,9 @@
 5. Open XAMPP and click `Config` button in Apache module then `Apache (httdp.conf)`.
 6. Scroll down to find `DocumentRoot "C:/xampp/htdocs"` and `<Directory "C:/xampp/htdocs">`.
 7. Modify it to reflect `DocumentRoot "C:/xampp/htdocs/age-comes"` and `<Directory "C:/xampp/htdocs/age-comes">` respectively and save it.
-8. Start the Apache and MySQL module.
+8. Now in XAMPP landing page, click `Config` button in Apache module again then `PHP (php.ini)`.
+9. Scroll down to find `;extension=gd` and simple remove `;` leaving you with `extension=gd`. Then save it.
+10. Start the Apache and MySQL module in XAMPP.
 
 ## Running
 1. Open the Arduino IDE and plug in the electronics, namely, the Barcode Reader module and the Arduino Uno R3.
