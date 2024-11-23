@@ -25,6 +25,7 @@
 <html>
 
 <?php
+require_once 'create_data.php';
 require 'vendor/autoload.php';
 
 // Make Barcode object of Code128 encoding.
@@ -35,4 +36,5 @@ $renderer = new Picqer\Barcode\Renderers\HtmlRenderer();
 echo $renderer->render($barcode);
 echo $renderer->render($barcode);
 echo $renderer->render($barcode);
+
 ?>
