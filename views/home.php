@@ -23,3 +23,16 @@
     </body>
 
 <html>
+
+<?php
+require 'vendor/autoload.php';
+
+// Make Barcode object of Code128 encoding.
+$barcode = (new Picqer\Barcode\Types\TypeCode128())->getBarcode('222111');
+
+// Output the barcode as HTML in the browser with a HTML Renderer
+$renderer = new Picqer\Barcode\Renderers\HtmlRenderer();
+echo $renderer->render($barcode);
+echo $renderer->render($barcode);
+echo $renderer->render($barcode);
+?>

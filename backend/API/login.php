@@ -17,6 +17,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $dbpassword = "";
         $dbhost = "localhost";
 
+        $barcode = $data->barcode;
+        
+
         // Create connection
         $conn = new mysqli($dbhost, $dbusername, $dbpassword, $dbname);
 
@@ -25,9 +28,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             die("Connection failed: " . $conn->connect_error);
         }
 
-    
-        $sql = "INSERT INTO users (firstname, lastname, middlename, email, cardnumber, lastpurchase, usedbudget, budgetleft)
-        VALUES ('John', 'Doe', 'Mendoza', 'john@example.com', 123456789, 'ue store', '200', '1500')";
+        //, email, cardnumber, lastpurchase, usedbudget, budgetleft)
+        $sql = "INSERT INTO users (firstname, lastname, middlename)
+        VALUES ('$barcode', 'Doe', 'Mendoza')";
 
         $conn->query($sql);
 

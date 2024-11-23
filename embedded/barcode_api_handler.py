@@ -4,7 +4,7 @@ import requests
 
 arduino_port = "COM5"
 baud_rate = 9600
-server_url = "http://192.168.1.19/api/login" 
+server_url = "http://localhost/api/login" 
 
 # Open serial connection
 ser = serial.Serial(arduino_port, baud_rate, timeout=1)
