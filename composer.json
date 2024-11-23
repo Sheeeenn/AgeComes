@@ -1,5 +1,8 @@
 {
+    "name": "vendor/picqer", 
+    "description": "A system for managing AgeComes operations, including barcode generation.", 
     "require": {
         "picqer/php-barcode-generator": "^3.2"
-    }
+    },
+    "license": "LGPL-3.0-or-later"
 }
