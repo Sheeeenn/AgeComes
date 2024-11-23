@@ -1,5 +1,5 @@
 <?php
-require("backend/database/connection.php");
+require("backend/main/register.php");
 ?>
 
 <html lang="en">
@@ -35,7 +35,7 @@ require("backend/database/connection.php");
             <input type="text" name="ename" class="fields fields2" required>
             <div class="empty"></div>
             <label for="lname" class="txtfields2">CARD NUMBER:</label>
-            <input type="text" name="cname" class="fields fields2 margin" required>
+            <input type="text" name="cname" class="fields fields2 margin" pattern="^\d{9}$" required>
             <button type="submit"><p>REGISTER</p></button>
             
         </form>
