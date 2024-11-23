@@ -2,6 +2,7 @@ body{
     margin: 0;
     padding: 0;
     background-color: rgb(224, 248, 224);
+    min-height: calc(100vh + 100px);
 }
 
 .header{
