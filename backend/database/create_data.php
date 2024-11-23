@@ -3,7 +3,7 @@
 $host = "localhost";
 $username = "root";
 $password = "";
-$dbname = "AgeComes";
+$dbname = "agecomes";
 
 $conn = new mysqli($host, $username, $password);
 
@@ -22,7 +22,7 @@ if ($conn->connect_error) {
 }
 
 $sql = "
-CREATE TABLE IF NOT EXISTS AgeComes (
+CREATE TABLE IF NOT EXISTS agecomes (
     Id INT AUTO_INCREMENT PRIMARY KEY,
     BarCodeNumber CHAR(9) UNIQUE NOT NULL,
     Email VARCHAR(255) NOT NULL,
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS AgeComes (
 if ($conn->query($sql) === FALSE) {
     echo "Error: " . $conn->error;
 }
-
+        
 $conn->close();
 
 
