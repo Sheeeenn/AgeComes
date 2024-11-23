@@ -13,6 +13,9 @@ switch($user_link){
     case "/update":
         require("views/update.php");
         break;
+    case "/information":
+        require("views/information.php");
+        break;
     case "/api/login":
         require("backend/API/login.php");
         break;

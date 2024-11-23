@@ -2,7 +2,7 @@
 .registercard{
     
     background-color: rgb(181, 255, 181);
-    width: 50%;
+    width: 70%;
     margin: 2% auto auto auto;
     border: 2px solid rgb(0, 151, 0);
     border-radius: 20px;
@@ -33,8 +33,8 @@ button:focus {
     color: #d4ba4e;
     font-weight: 900;
     font-size: 30px;
-    grid-column: span 3;
-    margin-top: 20%;
+    grid-column: span 2;
+    margin-top: 30%;
 }
 .container{
     display: grid;
@@ -54,19 +54,22 @@ form{
 }
 
 .fields{
-    width: 90%;
+    
     background-color: transparent;
     border: none;
     font-size: 23px;
     border: none; 
-    border-bottom: 3px solid hsl(120, 100%, 19%); 
+    border-bottom: 1px solid hsl(120, 100%, 19%); 
     outline: none; /* Remove default focus outline */
+
+}
+.spanfields{
+    width: 90%;
     grid-column: span 4;
-    
 }
 .fields2{
-    margin-top: 15%;
-    grid-column: span 5;
+    margin-top: 7%;
+    grid-column: span 8;
 }
 
 .fields3{
@@ -77,5 +80,5 @@ form{
     grid-column: span 7;
 }
 .empty{
-    grid-column: span 5;
+    grid-column: span 2;
 }

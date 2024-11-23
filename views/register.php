@@ -16,9 +16,9 @@
         <form action="/action_page.php" class="container">
         
             <label for="fname" class="txtfields">NAME:</label>
-            <input type="text" id="fname" name="fname" class="fields">
-            <input type="text" id="fname" name="fname" class="fields">
-            <input type="text" id="fname" name="fname" class="fields"><br><br>
+            <input type="text" id="fname" name="fname" class="fields spanfields">
+            <input type="text" id="fname" name="fname" class="fields spanfields">
+            <input type="text" id="fname" name="fname" class="fields spanfields"><br><br>
             
             <div class="names">SURNAME</div>
 
@@ -27,8 +27,8 @@
             <div class="names">MIDDLE NAME</div>
                 
         
-            <label for="lname" class="txtfields">EMAIL:</label>
-            <input type="text" id="lname" name="lname" class="fields fields4">
+            <label for="lname" class="txtfields2">EMAIL:</label>
+            <input type="text" id="lname" name="lname" class="fields fields2">
             <div class="empty"></div>
             <label for="lname" class="txtfields2">CARD NUMBER:</label>
             <input type="text" id="lname" name="lname" class="fields fields2">
