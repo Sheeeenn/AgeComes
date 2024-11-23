@@ -17,7 +17,7 @@
         </div>
 
         <div class="dgrid">
-            <button><p>REGISTER</p></button>
+            <a href="/register"><button><p>REGISTER</p></button></a>
         </div>
 
     </body>
