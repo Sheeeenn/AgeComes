@@ -27,7 +27,7 @@ button:focus {
     color: #d4ba4e;
     font-weight: 900;
     font-size: 30px;
-    grid-column: span 1;
+    grid-column: span 2;
 }
 .txtfields2{
     color: #d4ba4e;
@@ -38,15 +38,15 @@ button:focus {
 }
 .container{
     display: grid;
-    grid-template-columns: repeat(13, 1fr);
+    grid-template-columns: repeat(14, 1fr);
     
 }
 .names{
     color: hsl(120, 100%, 25%);
     grid-column: span 4;
     text-align: center;
-    margin-right: 8%;
-    margin-top: 1.3%;
+    margin-right: 9%;
+    margin-top: 1.5%;
 }
 
 form{
@@ -60,7 +60,7 @@ form{
     font-size: 23px;
     border: none; 
     border-bottom: 1px solid hsl(120, 100%, 19%); 
-    outline: none; /* Remove default focus outline */
+    outline: none; 
 
 }
 .spanfields{
@@ -69,7 +69,10 @@ form{
 }
 .fields2{
     margin-top: 7%;
-    grid-column: span 8;
+    grid-column: span 9;
+}
+.margin{
+    margin-top: 11%;
 }
 
 .fields3{
@@ -80,5 +83,8 @@ form{
     grid-column: span 7;
 }
 .empty{
-    grid-column: span 2;
+    grid-column: span 3;
+}
+.empty2{
+    grid-column: span 1;
 }
