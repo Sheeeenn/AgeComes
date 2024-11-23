@@ -15,13 +15,13 @@
    > Make sure the moved folder has all the files inside like `index.php`. (not just another age-comes folder, as it will not work)
    
 5. Open XAMPP and click `Config` button in Apache module then `Apache (httdp.conf)`.
-6. Scroll down to find `DocumentRoot "C:/xampp/htdocs"` and `<Directory "C:/xampp/htdocs"`.
+6. Scroll down to find `DocumentRoot "C:/xampp/htdocs"` and `<Directory "C:/xampp/htdocs">`.
 7. Modify it to reflect `DocumentRoot "C:/xampp/htdocs/age-comes"` and `<Directory "C:/xampp/htdocs/age-comes">` respectively and save it.
 8. Start the Apache and MySQL module.
 
 ## Running
 1. Open the Arduino IDE and plug in the electronics, namely, the Barcode Reader module and the Arduino Uno R3.
-2. Through the Arduino IDE, open the file which is located in the project folder `age-comes > embedded > barcode_reader > barcode_reader.ino
+2. Through the Arduino IDE, open the file which is located in the project folder `age-comes > embedded > barcode_reader > barcode_reader.ino`.
 3. Select the open arduino port in the dropdown.
 
    > Take note of the port (e.g. "COM3") number of the arduino as it will be crucial for the python script
