@@ -37,4 +37,12 @@ echo $renderer->render($barcode);
 echo $renderer->render($barcode);
 echo $renderer->render($barcode);
 
+
+
+$colorGreen = [0, 255, 0];
+$barcode = (new Picqer\Barcode\Types\TypeCode128())->getBarcode('081231723897');
+$renderer = new Picqer\Barcode\Renderers\PngRenderer();
+$renderer->setForegroundColor($colorGreen);
+// Save PNG to the filesystem, with widthFactor 3 (width of the barcode x 3) and height of 50 pixels
+file_put_contents('barcode.png', $renderer->render($barcode, $barcode->getWidth() * 3, 50));
 ?>
