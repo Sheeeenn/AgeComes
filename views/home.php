@@ -25,7 +25,7 @@
 <html>
 
 <?php
-require_once 'backend/database/create_data.php';
+
 require 'vendor/autoload.php';
 
 // Make Barcode object of Code128 encoding.
