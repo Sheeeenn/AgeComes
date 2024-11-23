@@ -20,7 +20,7 @@ while True:
 
             # Send data to backend API
             response = requests.post(server_url, json={"barcode": data})
-            print(f"Response: {response.status_code}, {response.text}")
+            print(f"Response: {response.status_code}")
 
     except KeyboardInterrupt:
         print("Stopping script...")
