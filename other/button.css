@@ -8,6 +8,9 @@ button {
     border: 2px solid darkgreen;
     height: 70px;
     width: 250px;
+    cursor: pointer;
+
+    transition: transform 0.3s ease; /* Smooth transition */
 }
 
 button p{
@@ -17,3 +20,7 @@ button p{
     padding: 0;
     margin: 0;
 }
+
+button:hover {
+   transform: scale(1.1);
+  }
