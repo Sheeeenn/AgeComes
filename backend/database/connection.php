@@ -1,6 +1,6 @@
 <?php
 
-$dbname = "AgeComes";
+$dbname = "agecomes";
 $dbusername = "root";
 $dbpassword = "";
 $dbhost = "localhost";
