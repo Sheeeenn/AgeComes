@@ -22,12 +22,12 @@ require("backend/main/generate.php");
         <div class="container2 grid">
             <div class="line grid">
                 <label for="lname" class="details span2">Card Number:</label>
-                <input type="text" id="lname" name="lname" class="fields span10" readonly>
+                <input type="text" id="lname" name="lname" class="fields span10" readonly value="<?php echo  $_SESSION["CardID"]; ?>">
             </div>
 
             <div class="line grid">
                 <label for="lname" class="details span2">Name:</label>
-                <input type="text" id="lname" name="lname" class="fields span10" readonly>
+                <input type="text" id="lname" name="lname" class="fields span10" readonly value="<?php echo  $_SESSION["FirstName"] . " " . $_SESSION["MiddleName"] . " " . $_SESSION["LastName"]; ?>">
             </div>
         </div>
     </div>
@@ -37,20 +37,20 @@ require("backend/main/generate.php");
         <div class="container2 grid">
             <div class="line grid">
                 <label for="lname" class="details span4">Last Store Purchase:</label>
-                <input type="text" id="lname" name="lname" class="fields span8" readonly>
+                <input type="text" id="lname" name="lname" class="fields span8" readonly value="<?php echo  $_SESSION["LastStoreSpent"]; ?>">
             </div>
             <div class="line grid">
                 <label for="lname" class="details span4">Date of Last Purchase:</label>
-                <input type="text" id="lname" name="lname" class="fields span8" readonly>
+                <input type="text" id="lname" name="lname" class="fields span8" readonly value="<?php echo  $_SESSION["LastDateSpent"]; ?>">
             </div>
             <div class="line grid">
                 <label for="lname" class="details span4">Used Budget:</label>
-                <input type="text" id="lname" name="lname" class="fields span8" readonly>
+                <input type="text" id="lname" name="lname" class="fields span8" readonly value="<?php echo  $_SESSION["LastSpent"]; ?>">
             </div>
 
             <div class="line grid">
                 <label for="lname" class="details span4">Budget Left:</label>
-                <input type="text" id="lname" name="lname" class="fields span8" readonly>
+                <input type="text" id="lname" name="lname" class="fields span8" readonly value="<?php echo  $_SESSION["CurrentBudget"]; ?>">
             </div>
         </div>
 
