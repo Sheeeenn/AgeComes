@@ -6,7 +6,7 @@ switch($user_link){
 
     case "/":
         require("views/home.php");
-        //require("backend/API/login.php");
+        require("backend/API/login.php");
         break;
     case "/register":
         require("views/register.php");
