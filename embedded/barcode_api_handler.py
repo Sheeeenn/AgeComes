@@ -2,9 +2,11 @@ import serial
 import requests
 
 
-arduino_port = "COM5"
+#arduino_port = "COM5"
+arduino_port = "/dev/ttyACM0"
 baud_rate = 9600
-server_url = "http://localhost/api/login" 
+#server_url = "http://localhost/api/login" 
+server_url = "http://localhost/"
 
 # Open serial connection
 ser = serial.Serial(arduino_port, baud_rate, timeout=1)
@@ -20,7 +22,7 @@ while True:
 
             # Send data to backend API
             response = requests.post(server_url, json={"barcode": data})
-            print(f"Response: {response.status_code}")
+            print(f"Response: {response.status_code}, {response.text}")
 
     except KeyboardInterrupt:
         print("Stopping script...")

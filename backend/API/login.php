@@ -1,28 +1,45 @@
 <?php
-header('Content-Type: application/json');
-// Enable CORS for local development
-header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Headers: Content-Type");
-header("Access-Control-Allow-Methods: POST");
+require("backend/database/start.php");
+require("backend/database/connection.php");
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Get the JSON data from the request body
-    $data = json_decode(file_get_contents("php://input"));
 
-    // Check if data is valid
-    if (isset($data->barcode)) {                                                                                                            
+$data = json_decode(file_get_contents('php://input'), true);
 
-        $barcode = $data->barcode;
-        header("location: /update");
+if (isset($data['barcode'])) {
+    $barcode = $data['barcode'];
+
+    
+    $sql = "SELECT * FROM agecomes WHERE BarCodeNumber = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $barcode); 
+
+
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+
+    if ($result->num_rows > 0) {
         
-
+        $user = $result->fetch_assoc();
+        $_SESSION['user'] = $user; 
+        
+        header("Location: /dashboard"); 
     } else {
-
-        echo json_encode(["status" => "Error", "message" => "Card is not Registered"]);
-        
+       
+        echo json_encode([
+            "success" => false,
+            "message" => "Barcode not found."
+        ]);
     }
 
+    $stmt->close();
 } else {
-    echo json_encode(["status" => "error", "message" => "Invalid request method"]);
+    
+    echo json_encode([
+        "success" => false,
+        "message" => "Barcode not provided."
+    ]);
 }
+
+$conn->close();
 ?>
