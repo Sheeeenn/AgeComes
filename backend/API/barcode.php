@@ -39,12 +39,7 @@ try {
         }
 
         $stmt->close();
-    } else {
-        echo json_encode([
-            "success" => false,
-            "message" => "No barcode provided"
-        ]);
-    }
+    } 
 
     $conn->close();
 
