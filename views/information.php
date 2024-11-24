@@ -61,7 +61,7 @@ require("backend/main/generate.php");
             <a class="barcode" id="openModal"><?php echo $renderer->render($barcode , $barcode->getWidth() * 4, 100);  ?></a>
         </div>
         <div class="button-div">
-            <button type="submit" class="button where2"><p>UPDATE</p></button>
+            <button onclick="location.href='/update'" class="button where2"><p>UPDATE</p></button>
         </div>
         <div class="click-div">
             <p class="click">(CLICK TO VIEW FULLSCREEN)</p>
