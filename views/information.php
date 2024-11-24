@@ -55,11 +55,23 @@ require("backend/main/generate.php");
         </div>
 
     </div>
+
+    <!-- Modal Structure -->
+    <div id="modalOverlay" class="modal-overlay">
+        <div class="modal">
+        <a class="close-btn" id="closeModal">&times;</a>
+        <h2>Your Barcode</h2>
+        <br>
+        <?php echo $renderer->render($barcode , $barcode->getWidth() * 8, 200);  ?>
+        <br>
+        <a href="">Download as PDF.</a>
+        </div>
+    </div>
     
     
     <div class="space">
         <div class="bar-div">
-            <a class="barcode" href="fb.com" target="_blank"><?php echo $renderer->render($barcode , $barcode->getWidth() * 4, 100);  ?></a>
+            <a class="barcode" id="openModal"><?php echo $renderer->render($barcode , $barcode->getWidth() * 4, 100);  ?></a>
         </div>
         <div class="button-div">
             <button type="submit" class="button where2"><p>UPDATE</p></button>
@@ -69,7 +81,7 @@ require("backend/main/generate.php");
         </div>
     </div>
     
-
+    <script src="js/information.js"></script>
     
 </body>
 

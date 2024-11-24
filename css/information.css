@@ -126,3 +126,51 @@ button:hover {
     text-align: left;
     font-family: sans-serif;
 }
+
+.barcode {
+    cursor: pointer;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Modal Box */
+  .modal {
+    background: #fff;
+    padding: 30px 30px 50px 30px;
+    border-radius: 8px;
+    width: 800px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Close Button */
+  .close-btn {
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 50px;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+  }
+
+  .modal-overlay h2 {
+    font-family: sans-serif;
+  }
+  
+  
+  /* Show Modal */
+  .modal-overlay.active {
+    display: flex;
+  }
