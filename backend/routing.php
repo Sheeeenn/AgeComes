@@ -23,6 +23,9 @@ switch($user_link){
     case "/api/login":
         require("backend/API/login.php");
         break;
+    case "/api/barcode":
+        require("backend/API/barcode.php");
+        break;
     default:
         http_response_code(404);
         break;

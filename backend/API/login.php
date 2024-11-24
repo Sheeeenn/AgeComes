@@ -1,5 +1,5 @@
 <?php
-require("backend/database/start.php");
+require("backend/start.php");
 require("backend/database/connection.php");
 
 
