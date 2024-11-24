@@ -5,7 +5,9 @@
 1. XAMPP
 2. Arduino IDE
 3. Composer
-4. Any IDE for Python (e.g. VS code)
+4. Python
+5. Any IDE for Python (e.g. VS code)
+
 
 ## Setup
 1. Download as ZIP or clone the Project.
@@ -20,17 +22,19 @@
 8. Now in XAMPP landing page, click `Config` button in Apache module again then `PHP (php.ini)`.
 9. Scroll down to find `;extension=gd` and simple remove `;` leaving you with `extension=gd`. Then save it.
 10. Start the Apache and MySQL module in XAMPP.
+11. Open the command line and enter: `pip install asyncio websockets serial requests`
 
 ## Running
 1. Open the Arduino IDE and plug in the electronics, namely, the Barcode Reader module and the Arduino Uno R3.
 2. Through the Arduino IDE, open the file which is located in the project folder `age-comes > embedded > barcode_reader > barcode_reader.ino`.
-3. Select the open arduino port in the dropdown.
+3. Select the select arduino port/board in the dropdown.
 
    > Take note of the port (e.g. "COM3") number of the arduino as it will be crucial for the python script
+   
 4. Upload the code to the arduino via the `Upload` button.
 5. Open any IDE like VScode and open the `age-comes` folder located in the `C:/xampp/htdocs` directory.
 6. Select the python script inside the `embedded` folder named: `barcode_api_handler.py`.
-7. Before running, make sure the arduino_port variable matches what is showing in the arduino IDE. Simply replace `"COM5"` with `<"your_arduino_port"`
+7. Before running, make sure the arduino_port variable matches what is showing in the arduino IDE. Simply replace `"COM5"` with `<"your_arduino_port>"`
 8. Run the python script.
 9. While the python script is running, go to your browser and type in `localhost`. The website should show up.
 10. Try registering to the website and try to see if everything works, including the barcode reader.
