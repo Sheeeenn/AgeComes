@@ -1,3 +1,6 @@
+<?php
+require("backend/main/home.php");
+?>
 <!DOCTYPE html>
 <html>
     <head>
