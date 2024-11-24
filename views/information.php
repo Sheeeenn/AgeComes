@@ -76,7 +76,7 @@ require("backend/main/generate.php");
             <br>
             <?php echo $renderer->render($barcode , $barcode->getWidth() * 8, 200);  ?>
             <br>
-            <a href="">Download as PDF.</a>
+            <a href="/download_barcode">Download as Image.</a>
         </div>
     </div>
     
