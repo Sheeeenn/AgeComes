@@ -1,4 +1,5 @@
 <?php
+require("backend/start.php");
 require("backend/database/connection.php");
 
 
@@ -18,13 +19,11 @@ if (isset($data['barcode'])) {
 
 
     if ($result->num_rows > 0) {
-
-        require("backend/database/start.php");
         
         $user = $result->fetch_assoc();
         $_SESSION['user'] = $user; 
         
-        header("location: /dashboard"); 
+        header("Location: /dashboard"); 
     } else {
        
         echo json_encode([

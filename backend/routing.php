@@ -6,7 +6,7 @@ switch($user_link){
 
     case "/":
         require("views/home.php");
-        //require("backend/API/login.php");
+        require("backend/API/login.php");
         break;
     case "/register":
         require("views/register.php");
@@ -22,6 +22,9 @@ switch($user_link){
         break;
     case "/api/login":
         require("backend/API/login.php");
+        break;
+    case "/api/barcode":
+        require("backend/API/barcode.php");
         break;
     default:
         http_response_code(404);
