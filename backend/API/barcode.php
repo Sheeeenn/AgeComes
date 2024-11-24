@@ -23,8 +23,9 @@ try {
         $result = $stmt->get_result();
 
         if ($result->num_rows > 0) {
-            $user = $result->fetch_assoc();
-            $_SESSION['user'] = $user;
+            while ($row = $result->fetch_assoc()) {
+                $_SESSION["CardID"] = $row["BarCodeNumber"];
+            }
             
             echo json_encode([
                 "success" => true,
