@@ -29,7 +29,7 @@
     font-size: 40px;
     font-family: sans-serif;
     font-weight: 500;
-    grid-column: span 3;
+    grid-column: span 4;
 }
 .fields{
     color: #047e43;
@@ -42,7 +42,7 @@
     border-bottom: 1px solid transparent; 
     outline: none; /* Remove default focus outline */
     transition: border-color 0.3s ease;
-    grid-column: span 9;
+    grid-column: span 8;
 }
 .fields:focus{
     border-bottom: 1px solid hsl(120, 100%, 19%);

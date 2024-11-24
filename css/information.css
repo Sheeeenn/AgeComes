@@ -1,8 +1,9 @@
-.container{
+.container {
     width: 90%;
     margin: 5% auto auto auto;
 }
-.text{
+
+.text {
     position: absolute;
     display: inline-block;
     font-family: sans-serif;
@@ -15,61 +16,71 @@
     border-radius: 50px;
     border: 3px solid #1b8b53
 }
-.container2{
-    
+
+.container2 {
+    background-color: #aff0c4;
     border: 3px solid #1b8b53;
     border-radius: 20px;
     padding: 4.5% 3% 3% 3%;
-    background-color: #aff0c4;
+    
 }
 
-.grid{
+.grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 }
-.details{
+
+.details {
     color: #047e43;
     font-size: 40px;
     font-family: sans-serif;
     font-weight: 500;
-    
+
 }
-.fields{
+
+.fields {
     color: #047e43;
     width: 90%;
     background-color: transparent;
     border: none;
     font-size: 34px;
     font-weight: 600;
-    border: none; 
-    border-bottom: 1px solid transparent; 
-    outline: none; /* Remove default focus outline */
+    border: none;
+    border-bottom: 1px solid transparent;
+    outline: none;
+    /* Remove default focus outline */
     transition: border-color 0.3s ease;
-    
+
 }
-.span10{
+
+.span10 {
     grid-column: span 10;
 }
-.span8{
+
+.span8 {
     grid-column: span 8;
 }
-.span2{
+
+.span2 {
     grid-column: span 2;
 }
-.span4{
+
+.span4 {
     grid-column: span 4;
 }
 
 
-.fields:focus{
+.fields:focus {
     border-bottom: 1px solid hsl(120, 100%, 19%);
 }
-.line{
+
+.line {
     margin-bottom: 1%;
     grid-column: span 12;
-    
+
 }
-.pad{
+
+.pad {
     margin-bottom: 3%;
 }
 
@@ -81,11 +92,12 @@ button {
     border: 2px solid darkgreen;
     padding: 0.5% 2.5% 0.5% 2.5%;
     cursor: pointer;
-    transition: transform 0.3s ease; /* Smooth transition */
+    transition: transform 0.3s ease;
+    /* Smooth transition */
 }
 
 
-button p{
+button p {
     font-size: 30px;
     font-weight: 800;
     color: #087c44;
@@ -94,9 +106,9 @@ button p{
 }
 
 button:hover {
-   transform: scale(1.05);
-   background-color: #ffffff;
-  }
+    transform: scale(1.05);
+    background-color: #ffffff;
+}
 
 .space {
     margin-top: 20px;
@@ -108,6 +120,7 @@ button:hover {
 .bar-div {
     grid-column: 2 / span 4;
     grid-row: 1 / span 2;
+    
 }
 
 .button-div {
@@ -120,7 +133,7 @@ button:hover {
     grid-row: 3 / span 1;
 }
 
-.click{
+.click {
     padding: 0;
     margin: 0;
     text-align: left;
@@ -141,19 +154,21 @@ button:hover {
     background-color: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
-  }
-  
-  /* Modal Box */
-  .modal {
-    background: #fff;
+}
+
+/* Modal Box */
+.modal {
     padding: 30px 30px 50px 30px;
     border-radius: 8px;
     width: 800px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  }
-  /* Close Button */
-  .close-btn {
+    background-color: #aff0c4;
+    border: 3px solid #1b8b53;
+}
+
+/* Close Button */
+.close-btn {
     color: white;
     border: none;
     border-radius: 50%;
@@ -162,14 +177,44 @@ button:hover {
     position: absolute;
     top: 10px;
     right: 25px;
-  }
+}
 
-  .modal-overlay h2 {
+.modal-overlay h2 {
     font-family: sans-serif;
-  }
-  
-  
-  /* Show Modal */
-  .modal-overlay.active {
+}
+
+
+/* Show Modal */
+.modal-overlay.active {
     display: flex;
-  }
+}
+
+.download-btn {
+    
+    display: inline-block;
+    background-color: #2dba60;
+    border-radius: 35px;
+    border: 2px solid darkgreen;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    /* Smooth transition */
+    padding: 1% 3% 1% 3%;
+    font-size: 30px;
+    font-weight: 800;
+    color: #087c44;
+    margin: 0;
+}
+
+
+.download-btn:hover {
+    transform: scale(1.05);
+    background-color: #ffffff;
+}
+.download-text{
+    font-family: sans-serif;
+    font-size: 50px;
+    font-weight: bolder;
+    color: #087c44;
+    margin: 0;
+}

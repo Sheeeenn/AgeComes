@@ -72,11 +72,11 @@ require("backend/main/generate.php");
     <div id="modalOverlay" class="modal-overlay">
         <div class="modal">
             <a class="close-btn" id="closeModal">&times;</a>
-            <h2>Your Barcode</h2>
+            <h2 class="download-text">Your Barcode</h2>
             <br>
             <?php echo $renderer->render($barcode , $barcode->getWidth() * 8, 200);  ?>
             <br>
-            <a href="/download_barcode">Download as Image.</a>
+            <a href="/download_barcode" class="download-btn">Download as Image.</a>
         </div>
     </div>
     
