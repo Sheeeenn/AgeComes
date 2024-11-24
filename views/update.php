@@ -29,14 +29,6 @@ require("backend/main/update.php");
                 <input type="text" name="bname" class="fields">
             </div>
 
-            <div class="line grid">
-                <label for="lname" class="details">Date of Last Purchase:</label>
-            </div>
-
-            <div class="line grid">
-                <label for="lname" class="details">Budget Left:</label>
-            </div>
-
             <button type="submit">
                 <p>UPDATE</p>
             </button>
