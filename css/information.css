@@ -22,7 +22,7 @@
     border: 3px solid #1b8b53;
     border-radius: 20px;
     padding: 4.5% 3% 3% 3%;
-    
+
 }
 
 .grid {
@@ -117,15 +117,29 @@ button:hover {
     grid-template-rows: repeat(3, 50px);
 }
 
+.spacetop {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
 .bar-div {
     grid-column: 2 / span 4;
     grid-row: 1 / span 2;
-    
+
 }
 
 .button-div {
-    grid-column: 10 / span 2;
+    margin-left: -3%;
+    grid-column: 11 / span 2;
     grid-row: 1 / span 2;
+    
+
+}
+
+.logout {
+    margin-left: -7%;
+
 }
 
 .click-div {
@@ -163,8 +177,8 @@ button:hover {
     width: 800px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    background-color: #aff0c4;
-    border: 3px solid #1b8b53;
+    background-color: #ffffff;
+    border: 3px solid #000000;
 }
 
 /* Close Button */
@@ -190,7 +204,7 @@ button:hover {
 }
 
 .download-btn {
-    
+
     display: inline-block;
     background-color: #2dba60;
     border-radius: 35px;
@@ -211,10 +225,11 @@ button:hover {
     transform: scale(1.05);
     background-color: #ffffff;
 }
-.download-text{
+
+.download-text {
     font-family: sans-serif;
     font-size: 50px;
     font-weight: bolder;
-    color: #087c44;
+    color: #000000;
     margin: 0;
 }
