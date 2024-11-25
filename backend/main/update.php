@@ -24,22 +24,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Validate CurrentBudget
     if ($currentBudget < $budgetspent) {
-        die("Error: Insufficient budget. The transaction cannot proceed.");
+        echo "<script>alert('Insufficient balance.');</script>";
+    } else {
+        // Proceed with the update if validation passes
+        $prep = $conn->prepare("UPDATE agecomes SET LastStoreSpent = ?, LastSpent = ?, CurrentBudget = CurrentBudget - ?, LastDateSpent = NOW() WHERE BarCodeNumber = ?");
+        if ($prep === false) {
+            die("Error preparing the update query: " . $conn->error);
+        }
+
+        $prep->bind_param("siii", $storename, $budgetspent, $budgetspent, $id);
+        $prep->execute();
+        $prep->close();
+
+        // require_once("backend/start.php");
+        // $_SESSION["CardID"] = $cardNumber;
+        header("location: /dashboard");
     }
 
-    // Proceed with the update if validation passes
-    $prep = $conn->prepare("UPDATE agecomes SET LastStoreSpent = ?, LastSpent = ?, CurrentBudget = CurrentBudget - ?, LastDateSpent = NOW() WHERE BarCodeNumber = ?");
-    if ($prep === false) {
-        die("Error preparing the update query: " . $conn->error);
-    }
-
-    $prep->bind_param("siii", $storename, $budgetspent, $budgetspent, $id);
-    $prep->execute();
-    $prep->close();
-
-    // require_once("backend/start.php");
-    // $_SESSION["CardID"] = $cardNumber;
-    header("location: /dashboard");
 
 }
 
