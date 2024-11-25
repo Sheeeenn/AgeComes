@@ -6,7 +6,6 @@ switch($user_link){
 
     case "/":
         require("views/home.php");
-        require("backend/API/login.php");
         break;
     case "/register":
         require("views/register.php");
@@ -16,6 +15,9 @@ switch($user_link){
         break;
     case "/dashboard":
         require("views/information.php");
+        break;
+    case "/logout":
+        require("views/logout.php");
         break;
     case "/download_barcode":
         require("backend/main/downloadbarcode.php");

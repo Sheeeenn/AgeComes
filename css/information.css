@@ -22,7 +22,7 @@
     border: 3px solid #1b8b53;
     border-radius: 20px;
     padding: 4.5% 3% 3% 3%;
-    
+
 }
 
 .grid {
@@ -117,15 +117,29 @@ button:hover {
     grid-template-rows: repeat(3, 50px);
 }
 
+.spacetop {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
 .bar-div {
     grid-column: 2 / span 4;
     grid-row: 1 / span 2;
-    
+
 }
 
 .button-div {
-    grid-column: 10 / span 2;
+    margin-left: -3%;
+    grid-column: 11 / span 2;
     grid-row: 1 / span 2;
+    
+
+}
+
+.logout {
+    margin-left: -7%;
+
 }
 
 .click-div {
@@ -144,32 +158,9 @@ button:hover {
     cursor: pointer;
 }
 
-.modal-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-}
-
-/* Modal Box */
-.modal {
-    padding: 30px 30px 50px 30px;
-    border-radius: 8px;
-    width: 800px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    background-color: #aff0c4;
-    border: 3px solid #1b8b53;
-}
-
 /* Close Button */
 .close-btn {
-    color: white;
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 50%;
     cursor: pointer;
@@ -178,23 +169,15 @@ button:hover {
     top: 10px;
     right: 25px;
 }
-
-.modal-overlay h2 {
-    font-family: sans-serif;
+.close-btn:hover {
+    color: rgb(255, 0, 0); 
 }
-
-
-/* Show Modal */
-.modal-overlay.active {
-    display: flex;
-}
-
 .download-btn {
-    
+
     display: inline-block;
-    background-color: #2dba60;
+    background-color: #ffffff;
     border-radius: 35px;
-    border: 2px solid darkgreen;
+    border: 3px solid darkgreen;
     text-decoration: none;
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -209,12 +192,75 @@ button:hover {
 
 .download-btn:hover {
     transform: scale(1.05);
-    background-color: #ffffff;
+    background-color: #2dba60;
 }
-.download-text{
+
+.download-text {
     font-family: sans-serif;
     font-size: 50px;
     font-weight: bolder;
-    color: #087c44;
+    color: #000000;
     margin: 0;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Modal Box */
+.modal {
+    padding: 2% 5% 2% 5%;
+    border-radius: 8px;
+    width: 800px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background-color: #ffffff;
+    border: 3px solid #000000;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    transform: scale(0.8); /* Start smaller */
+    animation: none; /* Default state */
+}
+
+.modal-overlay h2 {
+    font-family: sans-serif;
+}
+
+
+/* Show Modal */
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-overlay.active .modal {
+    opacity: 1;
+    transform: scale(1);
+    animation: popIn 0.4s ease-out; /* Trigger pop-in animation */
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0.8); /* Start small */
+        opacity: 0; /* Fully transparent */
+    }
+    60% {
+        transform: scale(1.05); /* Slight overshoot */
+        opacity: 1; /* Fully visible */
+    }
+    100% {
+        transform: scale(1); /* Settle at normal size */
+    }
 }
