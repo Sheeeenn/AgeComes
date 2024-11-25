@@ -17,7 +17,7 @@ require("backend/main/generate.php");
     <?php include("other/header.php") ?>
     <div class="spacetop">
         <div class="button-div logout">
-            <button onclick="location.href='/'" class="button where2">
+            <button onclick="location.href='/logout'" class="button where2">
                 <p>LOGOUT</p>
             </button>
         </div>

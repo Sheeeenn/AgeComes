@@ -16,6 +16,9 @@ switch($user_link){
     case "/dashboard":
         require("views/information.php");
         break;
+    case "/logout":
+        require("views/logout.php");
+        break;
     case "/download_barcode":
         require("backend/main/downloadbarcode.php");
         break;
