@@ -88,8 +88,10 @@ require("backend/main/generate.php");
         <div class="modal">
             <a class="close-btn" id="closeModal">&times;</a>
             <h2 class="download-text">Your Barcode</h2>
-            <br>
-            <?php echo $renderer->render($barcode, $barcode->getWidth() * 8, 200); ?>
+            <br><div class="barbar">
+                <?php echo $renderer->render($barcode, $barcode->getWidth() * 8, 200); ?>
+            </div>
+            
             <br>
             <a href="/download_barcode" class="download-btn">Download as Image.</a>
         </div>
